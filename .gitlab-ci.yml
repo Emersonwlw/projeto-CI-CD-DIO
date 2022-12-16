@@ -19,3 +19,12 @@ build_images:
     - docker build -t emersonwlw/kubernetes-projeto2-dio:1.0 app/.
     - docker push emersonwlw/kubernetes-projeto2-dio:1.0
 
+deploy_gcp:
+
+  stage: deploy_gcp
+
+  before_script:
+    - chmod 400 $SSH_KEY
+  
+  script:
+      - ssh -o StrictHostKeyChecking=no -i $SSH_KEY gcp@$SSH_SERVER "sudo rm -Rf ./project-cicd-dio/ && sudo git clone https://gitlab.com/Emersonwlw/project-cicd-dio.git && cd project-cicd-dio && sudo chmod +x ./script.sh && ./script.sh"
