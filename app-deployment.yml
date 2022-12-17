@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: emersonwlw/kubernetes-projeto2-dio:1.0
+        image: emersonwlw/kubernetes-projeto2-dio:1.1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
