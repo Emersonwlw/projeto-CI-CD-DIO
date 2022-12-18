@@ -18,6 +18,10 @@ build_images:
   script:
     - docker build -t emersonwlw/kubernetes-projeto2-dio:1.1 app/.
     - docker push emersonwlw/kubernetes-projeto2-dio:1.1
+    - docker build -t emersonwlw/kubernetes-mysql-project-dio:1.0 mysql/.
+    - docker push emersonwlw/kubernetes-mysql-project-dio:1.0
+
+
 
 deploy_gcp:
 
