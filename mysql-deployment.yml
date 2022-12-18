@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql
+  name: mysql-dados
 spec:
   accessModes:
     - ReadWriteOnce
@@ -36,12 +36,12 @@ spec:
           name: mysql
 
         volumeMounts:
-        - name: mysql
+        - name: mysql-dados
           mountPath: /var/lib/mysql/
       volumes:
-      - name: mysql
+      - name: mysql-dados
         persistentVolumeClaim:
-          claimName: mysql
+          claimName: mysql-dados
 
 ---
 
