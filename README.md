@@ -12,5 +12,5 @@ Com todas as configurações das papilines
 
 ## Autores
 
-- [@emerson](https://gitlab.com/Emersonwlw)
+- [@emerson](https://github.com/Emersonwlw)
 
